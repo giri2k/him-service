@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/inbound"
+	xmlns:tns="http://www.example.org/inbound" elementFormDefault="qualified">
+
+
+	<complexType name="PersonData">
+		<sequence>
+    		<element name="gender" type="string" maxOccurs="1" minOccurs="1"></element>
+			<element name="name" type="string" maxOccurs="1" minOccurs="1"></element>
+			<element name="address" type="tns:addressType"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="addressType">
+		<sequence>
+			<element name="houseno" type="string"></element>
+			<element name="street" type="string"></element>
+			<element name="city" type="string"></element>
+			<element name="pincode" type="string"></element>
+			<element name="state" type="string"></element>
+		</sequence>
+	</complexType>
+</schema>
